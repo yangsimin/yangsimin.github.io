@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="SimonYang"><link rel="alternative" href="/atom.xml" title="Welcome" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>手把手，静态博客搭起来！！从未这么细过（GitHub Pages + Hexo） - Welcome</title><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><script src="/js/jquery-3.1.1.min.js"></script><script src="/js/jquery-modal.js"></script><!-- Hotjar Tracking Code for ochukai.me --></head><body><header style="opacity:0" class="head"><h1 class="head-title u-fl"><a href="/">Welcome</a></h1><nav class="head-nav u-fr"><ul class="head-nav__list"><li class="head-nav__item"><a href="/archives" class="head-nav__link">目录</a></li></ul></nav></header><main class="main"><article class="post"><header class="post__head">  <time datetime="2017-04-03T06:39:46.000Z" class="post__time">April 3, 2017</time><h1 class="post__title"><a href="/2017/04/03/20170403/">手把手，静态博客搭起来！！从未这么细过（GitHub Pages + Hexo）</a></h1><div class="post__main echo"><p>很多人第一篇博客都是写自己的搭建心得，我也不例外，毕竟刚刚搭好的博客，空荡荡的，总想写些东西出来让它充实一点，但是一时半会又不知道该写什么好，于是就想把自己搭建的流程和遇到的坑都写出来以供参考。既然决定要写就会用心写，我会尽可能写得详细，让每个人都能轻易搭起来。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h2><ul>
+<li><p><strong>GitHub Pages</strong></p>
+<img src="/2017/04/03/20170403/WX20170403-152658@2x.png" alt="WX20170403-152658@2x.png" title="">
+<p>这是官方的解释，其实它原本是用来展示自己 GitHub 项目的首页，托管在 GitHub 上，但是我们可以在上面编写任何我们想写的内容。</p>
+</li>
+<li><p><strong>Hexo</strong></p>
+<p>这是一个快速、简洁且高效的博客框架。使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页—— By <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo</a></p>
+</li>
+</ul>
+<h2 id="步骤总览"><a href="#步骤总览" class="headerlink" title="步骤总览"></a><strong>步骤总览</strong></h2><ol>
+<li>申请一个 GitHub 账号，并且创建一个名字为 name.github.io 的项目（GitHub Pages）。</li>
+<li>安装 Hexo 工具，并绑定 GitHub Pages</li>
+<li>购买个人域名，并绑定 GitHub Pages</li>
+</ol>
+<h2 id="接下来就说下具体的步骤"><a href="#接下来就说下具体的步骤" class="headerlink" title="接下来就说下具体的步骤"></a><strong>接下来就说下具体的步骤</strong></h2><h3 id="1-创建-GitHub-Pages"><a href="#1-创建-GitHub-Pages" class="headerlink" title="1. 创建 GitHub Pages"></a><strong>1. 创建 GitHub Pages</strong></h3><p>首先登录 <a href="https://github.com/" target="_blank" rel="external">GitHub</a> (应该都有账号吧，没有的话也没关系，注册很简单，这里就不介绍了)</p>
+<img src="/2017/04/03/20170403/WX20170403-160713@2x.png" alt="WX20170403-160713@2x.png" title="">
+<p>点击<code>New repository</code> 新建一个项目。</p>
+<img src="/2017/04/03/20170403/WX20170403-161433@2x.png" alt="WX20170403-161433@2x.png" title="">
+<p>输入项目名称 name.github.io，记得把 name 改成 GitHub 的用户名，也就是跟前面 Owner 名称一样就行了，因为我已经创建过这个项目，所以那里有个警告，输入完后点<code>Create repository</code>就可以了。</p>
+<p>现在 GitHub Pages 已经建好了，但是里头是空空如也，可以打开浏览器输入 name.github.io （同样把 name 替换），会有惊喜噢。</p>
+<h3 id="2-安装-Hexo"><a href="#2-安装-Hexo" class="headerlink" title="2. 安装 Hexo"></a><strong>2. 安装 Hexo</strong></h3><h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a><strong>前提</strong></h3><ul>
+<li>Git</li>
+<li>Node.js</li>
+</ul>
+<p>Hexo 运作依赖于这两个工具，已经安装的可以跳过直接看「安装 Hexo」。</p>
+<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a><strong>安装 Git</strong></h3><p>「Git」是一款版本控制工具，一般都有装吧，没有的话可以去 <a href="https://git-scm.com/download" target="_blank" rel="external">Git官网</a> 选择对应的系统下载安装，步骤比较简单。</p>
+<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a><strong>安装 Node.js</strong></h3><p>这是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="external">维基百科</a>的描述，「<strong>Node.js</strong> 是一个开放源代码、跨平台的、可用于服务器端和网络应用的运行环境。」</p>
+<ul>
+<li><p><strong>Mac 用户</strong></p>
+<p>由于 Node.js 更新频繁，建议使用 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a> 安装，方便更新。 </p>
+<p>打开「终端」执行命令，安装「nvm」。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash</div></pre></td></tr></table></figure>
+<p>安装完后，重启终端，再安装「Node.js」。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nvm install stable</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Windows 用户</strong></p>
+<p>官方建议直接下载安装程序进行安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">下载</a>。（暂时没试过）</p>
+</li>
+</ul>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><strong>安装 Hexo</strong></h3><p>一切准备就绪后，可以执行命令安装「Hexo」。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a><strong>建站</strong></h3><p>安装好后，就要建站了。建站会生成一个文件夹，里面存放配置信息、资源、主题等文件，一般执行<code>hexo</code>命令都需要到这个文件夹里执行。</p>
+<p>首先通过打开命令行，通过<code>cd</code>命令定位到你想建站的位置，执行下面命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo init folder</div><div class="line"><span class="built_in">cd</span> folder</div><div class="line">npm install</div></pre></td></tr></table></figure>
+<p>其中 folder 为自定义的文件夹名，我自己定义的名字是 <strong>hexo</strong>。</p>
+<h3 id="本地测试"><a href="#本地测试" class="headerlink" title="本地测试"></a><strong>本地测试</strong></h3><p>接下来我们就可以在本地部署起来，测试一下。</p>
+<p>由于 <strong>Hexo 3.0</strong> 把服务器独立成单个模块，所以必须先安装 hexo-server 才能使用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-server --save</div></pre></td></tr></table></figure>
+<p>安装完成后执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure>
+<p>上面命令是<code>hexo server</code>命令的缩写。代码在本地部署后，可以通过<code>localhost:4000</code>访问，打开浏览器看看吧！虽然只是在本地部署，但是看到网页依然满满的成就感啊，默认的主题也不错，当然，如果想换主题的话，可以到 Hexo 官网找，有详细的配置说明。</p>
+<h3 id="绑定-GitHub-Pages"><a href="#绑定-GitHub-Pages" class="headerlink" title="绑定 GitHub Pages"></a><strong>绑定 GitHub Pages</strong></h3><p>这时候可以打开 name.github.io 看看，没错，还是原样。现在我们就开始部署到「Github」上面去。</p>
+<p>使用「git」部署，要先安装「hexo-deployer-git」。 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>安装完后，用文本编辑器打开<code>/hexo/_config.yml</code>，拉到最底下，找到<code># Deployment</code>，修改部署配置参数，把原本的<code>deploy、type</code>删除，增加下面代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/name/name.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>「repo」对应的是「GitHub Pages」项目的「URL」，这里只要把<code>name</code>改成对应的「GitHub 用户名」就可以了，例如<code>repo: https://github.com/yangsimin/yangsimin.github.io.git</code>，切记「:」后面「要有」空格，不然会出错，别问我为什么知道，都是泪。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a><strong>部署</strong></h3><p>好了，接下来可以部署了，很简单，执行这三行命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p><code>hexo clean</code>：清理缓存，特别是换个主题后，如果不清理可能会出现主题没有变化的情况。</p>
+<p><code>hexo g</code>：hexo generate 命令的简写，生成静态文件。</p>
+<p><code>hexo d</code>：hexo deploy 命令的简写，把静态文件部署到 GitHub 上。</p>
+<p>第2、3条命令其实可以合并成一条执行，<code>hexo d -g</code>或者<code>hexo g -d</code>，效果都一样的，接着就可以到「GitHub Pages」上看看变化啦，可能会有一些延迟。</p>
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a><strong>写作</strong></h3><p>好了，博客搭起来后，就可以开始写文章了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new title</div></pre></td></tr></table></figure>
+<p>「title」是文章的标题，也是文件的名称，执行了上面的代码后，会在<code>hexo/source/_posts/</code>里头生成一个「title.md」文件，接着就可以用 Markdown 编辑器打开来写文章啦。我自己用的编辑器是「Typora」，是「stormzhang」推荐的，界面干净简洁，用得挺舒服的。</p>
+<p>写完后可以先在本地部署起来，预览效果，觉得不错再部署到「GitHub」上。</p>
+<blockquote>
+<p>Hexo 就简单介绍就到这了，更多详细的内容可以查看 <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官方文档</a> 。</p>
+</blockquote>
+<h2 id="3-域名绑定"><a href="#3-域名绑定" class="headerlink" title="3. 域名绑定"></a><strong>3. 域名绑定</strong></h2><h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a><strong>购买域名</strong></h3><p>可以到 <a href="https://hk.godaddy.com/" target="_blank" rel="external">GoDaddy</a> 或者 <a href="https://wanwang.aliyun.com/domain/com" target="_blank" rel="external">万网</a>，我选的「万网」，具体的购买过程就不说啦。</p>
+<blockquote>
+<p>说实话，我的域名想了蛮久的，毕竟是名片般得存在，我觉得域名应该满足两个条件</p>
+<ol>
+<li>简单好记</li>
+<li>有自己的信仰或者个性在里面</li>
+</ol>
+<p>而我的域名之所以取「simonyang777.com」，原因有四个</p>
+<ol>
+<li>simonyang是我的笔名，可是simonyang.com 被人取了，而且报价一万多块</li>
+<li>不知道从什么时候起，我很喜欢「7」这个数字，重要的事情说三遍「777」</li>
+<li>玩水果盘的时候摇到「777」会得大奖，我觉得这也是幸运的象征</li>
+<li>文件的权限设置成「777」的时候，将开启最高权限，我觉得这是不受约束的象征</li>
+</ol>
+</blockquote>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a><strong>绑定域名</strong></h3><p>接着，需要拿到「GitHub Pages」的「IP」，可以打开命令行<code>ping</code>一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping name.github.io</div></pre></td></tr></table></figure>
+<img src="/2017/04/03/20170403/WX20170403-201449@2x.png" alt="WX20170403-201449@2x.png" title="">
+<p>我的 IP 是 <code>151.101.100.133</code> </p>
+<p>然后回到「万网」，进入控制台</p>
+<img src="/2017/04/03/20170403/WX20170403-202215@2x.png" alt="WX20170403-202215@2x.png" title="">
+<p>选择「域名」</p>
+<img src="/2017/04/03/20170403/WX20170403-202405@2x.png" alt="WX20170403-202405@2x.png" title="">
+<p>选择「解析」</p>
+<img src="/2017/04/03/20170403/WX20170403-202557@2x.png" alt="WX20170403-202557@2x.png" title="">
+<p>选择「修改」</p>
+<img src="/2017/04/03/20170403/WX20170403-202921@2x.png" alt="WX20170403-202921@2x.png" title="">
+<p>把刚刚得到的「IP」填到「记录值」里头去</p>
+<p>最后，也是最关键的一步，回到 <code>hexo/source/</code> 文件夹，新建一个名为「CNAME」的文件，注意，没有后缀名的，然后在编辑文件，写下你的域名。没有这一步，网页会显示「404」错误。</p>
+<img src="/2017/04/03/20170403/WX20170403-203930@2x.png" alt="WX20170403-203930@2x.png" title="">
+<p>然后执行 <code>hexo d -g</code> 部署到「GitHub」上去。</p>
+<p>最后在浏览器里输入你的域名，如果成功显示了「GitHub Pages」，那么恭喜你，你的博客搭建终于完成！</p>
+</div></header><footer class="post__foot u-cf"><ul class="post__tag u-fl"><li class="post__tag__item"><a href="/tags/搭建/" class="post__tag__link">搭建</a></li></ul></footer></article></main><footer class="foot"><div class="foot-copy u-fl"></div><!--!= '&copy; ' + theme.start_year + '-' + date(new Date(), 'YYYY') + ' ' + (config.author || config.title)-->&copy; 2017 SimonYang<menu class="page-menu u-fr"><li class="page-menu__item"><span title="Previous" class="page-menu__link icon-arrow-left page-menu__link--disabled"></span></li><li class="page-menu__item"><a title="Next" href="/2017/04/02/hello-world/" class="page-menu__link icon-arrow-right"></a></li></menu></footer><script src="/js/scroller.js"></script><script src="/js/main.js"></script></body></html>
